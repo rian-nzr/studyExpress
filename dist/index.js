@@ -5,7 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const secrets_1 = require("./secrets");
+const index_1 = __importDefault(require("./routes/index"));
 const app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use('/v1', index_1.default);
 app.get('/', (req, res) => {
     res.send('Application work!');
     console.log('kk');
