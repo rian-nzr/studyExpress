@@ -2,7 +2,6 @@ import express from 'express';
 import { Request, Response } from 'express';
 import { PORT } from './secrets';
 import rRouter from './routes/index'
-import authRouter from './routes/auth';
 
 const app = express();
 
